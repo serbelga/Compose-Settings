@@ -7,7 +7,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.alorma.settings.composables.SettingsMenuLink
+import com.alorma.compose.settings.SettingsMenuLink
 import com.alorma.settingslib.demo.AppScaffold
 import com.alorma.settingslib.ui.Navigation
 

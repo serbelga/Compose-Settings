@@ -7,17 +7,17 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.SortByAlpha
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.navigation.NavHostController
-import com.alorma.settings.composables.SettingsCheckbox
+import com.alorma.compose.settings.SettingsCheckbox
+import com.alorma.settingslib.demo.AppScaffold
 import com.alorma.settingslib.extensions.showSnackbar
 import kotlinx.coroutines.launch
 import kotlin.random.Random
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.setValue
-import com.alorma.settingslib.demo.AppScaffold
 
 @Composable
 fun CheckboxesScreen(navController: NavHostController) {

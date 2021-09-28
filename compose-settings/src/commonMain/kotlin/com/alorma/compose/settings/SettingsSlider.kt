@@ -1,4 +1,4 @@
-package com.alorma.settings.composables
+package com.alorma.compose.settings
 
 import androidx.annotation.IntRange
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -13,8 +13,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.alorma.settings.composables.internal.SettingsTileIcon
-import com.alorma.settings.composables.internal.SettingsTileSlider
+import com.alorma.compose.settings.internal.SettingsTileIcon
+import com.alorma.compose.settings.internal.SettingsTileSlider
 
 @Composable
 fun SettingsSlider(

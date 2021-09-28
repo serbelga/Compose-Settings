@@ -25,9 +25,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.alorma.settings.composables.SettingsMenuLink
-import com.alorma.settingslib.demo.AppScaffold
+import com.alorma.compose.settings.SettingsMenuLink
 import com.alorma.settingslib.R
+import com.alorma.settingslib.demo.AppScaffold
 import com.alorma.settingslib.extensions.showSnackbar
 import com.alorma.settingslib.extensions.toggle
 import com.alorma.settingslib.ui.helpers.InfoBottomSheet

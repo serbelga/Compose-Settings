@@ -10,7 +10,7 @@ import androidx.compose.material.ScaffoldState
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.alorma.settings.composables.internal.SettingsToolbar
+import com.alorma.compose.settings.internal.SettingsToolbar
 
 @Composable
 fun AppScaffold(

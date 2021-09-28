@@ -1,4 +1,4 @@
-package com.alorma.settings.composables.internal
+package com.alorma.compose.settings.internal
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.ProvideTextStyle

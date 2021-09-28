@@ -1,11 +1,48 @@
+import org.jetbrains.compose.compose
+
 plugins {
+  kotlin("multiplatform")
+  id("org.jetbrains.compose") version "1.0.0-alpha3"
   id("com.android.library")
-  kotlin("android")
 }
 
-ext["PUBLISH_ARTIFACT_ID"] = "compose-settings"
-
-apply(from = "${rootProject.projectDir}/scripts/publish-module.gradle")
+kotlin {
+  android()
+  jvm("desktop") {
+    compilations.all {
+      kotlinOptions.jvmTarget = "11"
+    }
+  }
+  sourceSets {
+    val commonMain by getting {
+      dependencies {
+        api(compose.runtime)
+        api(compose.foundation)
+        api(compose.material)
+        api(compose.materialIconsExtended)
+        api(compose.preview)
+      }
+    }
+    val commonTest by getting
+    val androidMain by getting {
+      dependencies {
+        api("androidx.appcompat:appcompat:1.3.1")
+        api("androidx.core:core-ktx:1.6.0")
+      }
+    }
+    val androidTest by getting {
+      dependencies {
+        implementation("junit:junit:4.13.2")
+      }
+    }
+    val desktopMain by getting {
+      dependencies {
+        api(compose.preview)
+      }
+    }
+    val desktopTest by getting
+  }
+}
 
 android {
   compileSdk = 30
@@ -30,33 +67,8 @@ android {
     isCheckReleaseBuilds = false
     isAbortOnError = false
   }
-
-  buildFeatures {
-    compose = true
-  }
-
-  composeOptions {
-    kotlinCompilerExtensionVersion = "1.0.2"
-  }
-
-  kotlinOptions {
-    jvmTarget = JavaVersion.VERSION_1_8.toString()
-
-    freeCompilerArgs = freeCompilerArgs + listOf(
-      "-Xopt-in=kotlin.RequiresOptIn",
-      "-Xopt-in=kotlin.Experimental",
-      "-Xuse-experimental=kotlin.Experimental",
-      "-XXLanguage:+NonParenthesizedAnnotationsOnFunctionalTypes",
-    )
-  }
 }
 
-dependencies {
-  implementation("androidx.compose.foundation:foundation:1.0.2")
-  implementation("androidx.compose.foundation:foundation-layout:1.0.2")
+ext["PUBLISH_ARTIFACT_ID"] = "compose-settings"
 
-  implementation("androidx.compose.ui:ui:1.0.2")
-  implementation("androidx.compose.material:material:1.0.2")
-  implementation("androidx.compose.material:material-icons-extended:1.0.2")
-  implementation("androidx.compose.ui:ui-tooling:1.0.2")
-}
+apply(from = "${rootProject.projectDir}/scripts/publish-module.gradle")

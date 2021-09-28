@@ -19,7 +19,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavHostController
-import com.alorma.settings.composables.SettingsSlider
+import com.alorma.compose.settings.SettingsSlider
 import com.alorma.settingslib.demo.AppScaffold
 
 @Composable

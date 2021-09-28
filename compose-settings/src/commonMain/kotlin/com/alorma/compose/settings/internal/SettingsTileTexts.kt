@@ -1,4 +1,4 @@
-package com.alorma.settings.composables.internal
+package com.alorma.compose.settings.internal
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

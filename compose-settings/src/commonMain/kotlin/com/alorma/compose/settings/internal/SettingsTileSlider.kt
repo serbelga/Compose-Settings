@@ -1,4 +1,4 @@
-package com.alorma.settings.composables.internal
+package com.alorma.compose.settings.internal
 
 import androidx.annotation.IntRange
 import androidx.compose.foundation.interaction.MutableInteractionSource
